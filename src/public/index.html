@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="당신의 진정한 사랑을 찾아보세요. 최고의 데이팅앱으로 새로운 인연을 만나보세요.">
+  <meta name="keywords" content="데이팅, 연애, 소개팅, 인연, 사랑">
+  <title>HeartLink - 당신의 진정한 사랑을 찾아보세요</title>
+  
+  <!-- 파비콘 -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  
+  <!-- CSS 파일 -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  
+  <!-- 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 아이콘 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- 네비게이션 바 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-heart"></i>
+        <span>HeartLink</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#home" class="nav-link">홈</a>
+        </li>
+        <li class="nav-item">
+          <a href="#features" class="nav-link">특징</a>
+        </li>
+        <li class="nav-item">
+          <a href="#how-it-works" class="nav-link">이용방법</a>
+        </li>
+        <li class="nav-item">
+          <a href="#testimonials" class="nav-link">후기</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">문의</a>
+        </li>
+      </ul>
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" onclick="scrollToSection('download')">다운로드</button>
+        <button class="btn btn-primary" onclick="scrollToSection('signup')">가입하기</button>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 히어로 섹션 -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          당신의 <span class="highlight">진정한 사랑</span>을<br>
+          찾아보세요
+        </h1>
+        <p class="hero-description">
+          HeartLink는 AI 기술을 활용하여 당신과 가장 잘 맞는 사람을 찾아드립니다.<br>
+          지금 시작하고 새로운 인연을 만나보세요.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary btn-large" onclick="scrollToSection('signup')">
+            <i class="fab fa-apple"></i>
+            App Store에서 다운로드
+          </button>
+          <button class="btn btn-secondary btn-large" onclick="scrollToSection('signup')">
+            <i class="fab fa-google-play"></i>
+            Google Play에서 다운로드
+          </button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">1M+</span>
+            <span class="stat-label">가입자</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50K+</span>
+            <span class="stat-label">성공 커플</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">95%</span>
+            <span class="stat-label">만족도</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="app-preview">
+              <div class="profile-card">
+                <div class="profile-image"></div>
+                <h3>김민수, 28</h3>
+                <p>여행을 좋아하는 개발자</p>
+                <div class="profile-tags">
+                  <span class="tag">여행</span>
+                  <span class="tag">독서</span>
+                  <span class="tag">커피</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 특징 섹션 -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">왜 HeartLink인가요?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>AI 매칭</h3>
+          <p>고급 AI 알고리즘이 당신의 취향과 성격을 분석하여 최적의 상대를 찾아드립니다.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>안전한 보안</h3>
+          <p>개인정보 보호와 안전한 만남을 위한 철저한 보안 시스템을 제공합니다.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3>화상 채팅</h3>
+          <p>안전한 화상 채팅으로 상대방과 더 깊이 있는 대화를 나눌 수 있습니다.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>위치 기반</h3>
+          <p>가까운 지역의 상대방을 찾아 실제 만남의 기회를 높여드립니다.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>그룹 데이트</h3>
+          <p>여러 명이 함께하는 그룹 데이트로 더 편안하고 재미있는 만남을 경험하세요.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>진정한 연결</h3>
+          <p>단순한 만남이 아닌 진정한 사랑과 관계를 찾을 수 있도록 도와드립니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 이용방법 섹션 -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <h2 class="section-title">이용방법</h2>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>프로필 생성</h3>
+            <p>간단한 정보 입력으로 나만의 프로필을 만들어보세요.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>AI 매칭</h3>
+            <p>AI가 당신과 잘 맞는 상대방을 찾아드립니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>대화 시작</h3>
+            <p>관심 있는 상대방과 대화를 시작해보세요.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>실제 만남</h3>
+            <p>서로를 더 잘 알게 되면 실제 만남을 가져보세요.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 후기 섹션 -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2 class="section-title">성공 스토리</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"HeartLink를 통해 만난 지금은 제 남편이 된 사람과 2년째 행복하게 살고 있어요. 정말 감사합니다!"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar"></div>
+            <div class="author-info">
+              <h4>김지영, 29세</h4>
+              <span>서울시 강남구</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"AI 매칭이 정말 정확했어요! 취향이 비슷한 사람을 만나서 금방 친해졌고, 지금은 연인 사이예요."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar"></div>
+            <div class="author-info">
+              <h4>박준호, 31세</h4>
+              <span>부산시 해운대구</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p>"안전하고 신뢰할 수 있는 플랫폼이어서 부담 없이 이용할 수 있었어요. 추천합니다!"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar"></div>
+            <div class="author-info">
+              <h4>이미나, 27세</h4>
+              <span>대구시 수성구</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 다운로드 섹션 -->
+  <section id="download" class="download">
+    <div class="container">
+      <div class="download-content">
+        <h2>지금 바로 시작하세요</h2>
+        <p>수백만 명의 사용자들이 이미 HeartLink에서 인연을 찾았습니다.</p>
+        <div class="download-buttons">
+          <button class="btn btn-primary btn-large">
+            <i class="fab fa-apple"></i>
+            <div class="btn-text">
+              <span class="btn-label">Download on the</span>
+              <span class="btn-title">App Store</span>
+            </div>
+          </button>
+          <button class="btn btn-secondary btn-large">
+            <i class="fab fa-google-play"></i>
+            <div class="btn-text">
+              <span class="btn-label">GET IT ON</span>
+              <span class="btn-title">Google Play</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 가입 섹션 -->
+  <section id="signup" class="signup">
+    <div class="container">
+      <div class="signup-content">
+        <h2>무료로 시작하세요</h2>
+        <p>지금 가입하고 새로운 인연을 만나보세요.</p>
+        <form class="signup-form" id="signupForm">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="이름" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="이메일" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" placeholder="전화번호" required>
+          </div>
+          <div class="form-group">
+            <select id="gender" name="gender" required>
+              <option value="">성별 선택</option>
+              <option value="male">남성</option>
+              <option value="female">여성</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-large">가입하기</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-heart"></i>
+            <span>HeartLink</span>
+          </div>
+          <p>당신의 진정한 사랑을 찾아드리는 최고의 데이팅앱</p>
+        </div>
+        <div class="footer-section">
+          <h4>서비스</h4>
+          <ul>
+            <li><a href="#features">특징</a></li>
+            <li><a href="#how-it-works">이용방법</a></li>
+            <li><a href="#testimonials">후기</a></li>
+            <li><a href="#download">다운로드</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>지원</h4>
+          <ul>
+            <li><a href="#contact">고객센터</a></li>
+            <li><a href="#contact">문의하기</a></li>
+            <li><a href="#contact">FAQ</a></li>
+            <li><a href="#contact">이용약관</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>연결</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 HeartLink. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript 파일 -->
+  <script src="/js/main.js"></script>
+</body>
+</html> 
