@@ -1,27 +1,72 @@
-/* 반응형 디자인 - 모바일 우선 접근법 */
+/* ===================================
+   Responsive Design
+   =================================== */
 
-/* 태블릿 (768px 이하) */
+/* Tablet (1024px 이하) */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+    padding: 3rem 0;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-image {
+    order: 1;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons, .hero-stats {
+    justify-content: center;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Mobile (768px 이하) */
 @media (max-width: 768px) {
-  /* 네비게이션 바 */
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  /* Navigation */
   .nav-menu {
     position: fixed;
+    top: 80px; /* navbar height */
     left: -100%;
-    top: 70px;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.98);
     width: 100%;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: var(--shadow-medium);
-    padding: var(--spacing-lg) 0;
+    height: calc(100vh - 80px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    transition: left 0.4s var(--transition-smooth);
+    gap: 2rem;
   }
 
   .nav-menu.active {
     left: 0;
   }
 
-  .nav-menu li {
-    margin: var(--spacing-md) 0;
+  .nav-link {
+    font-size: 1.5rem;
   }
 
   .nav-buttons {
@@ -29,84 +74,72 @@
   }
 
   .hamburger {
-    display: flex;
+    display: block;
   }
 
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
-
   .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
-
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  /* 히어로 섹션 */
-  .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: var(--spacing-2xl);
-  }
-
+  /* Hero */
   .hero-title {
-    font-size: var(--font-size-4xl);
+    font-size: 2.5rem;
   }
 
   .hero-description {
-    font-size: var(--font-size-base);
+    font-size: 1.1rem;
   }
 
   .hero-buttons {
     flex-direction: column;
     align-items: center;
-  }
-
-  .hero-stats {
-    justify-content: center;
+    gap: 1rem;
   }
 
   .phone-mockup {
-    width: 250px;
-    height: 500px;
-    transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
+    width: 280px;
+    height: 560px;
   }
 
-  /* 특징 섹션 */
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+  /* Sections */
+  .section {
+    padding: 4rem 0;
   }
 
-  .feature-card {
-    padding: var(--spacing-lg);
-  }
-
-  /* 이용방법 섹션 */
-  .steps-container {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-  }
-
-  /* 후기 섹션 */
+  .features-grid,
   .testimonials-grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
   }
 
-  /* 다운로드 섹션 */
-  .download-buttons {
-    flex-direction: column;
-    align-items: center;
+  .steps-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
-  /* 푸터 */
+  /* Download Section */
+  .download {
+    padding: 4rem 2rem;
+    margin: 4rem 0;
+  }
+
+  .download-content h2 {
+    font-size: 2rem;
+  }
+
+  /* Footer */
   .footer-content {
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
     text-align: center;
+  }
+
+  .footer-section ul {
+    padding: 0;
   }
 
   .social-links {
@@ -114,286 +147,39 @@
   }
 }
 
-/* 모바일 (480px 이하) */
+/* Small Mobile (480px 이하) */
 @media (max-width: 480px) {
-  /* 컨테이너 패딩 조정 */
   .container {
-    padding: 0 var(--spacing-md);
+    padding: 0 16px;
   }
 
-  /* 히어로 섹션 */
-  .hero {
-    padding: 100px 0 60px;
+  .nav-container {
+    padding: 0 16px;
   }
 
   .hero-title {
-    font-size: var(--font-size-3xl);
+    font-size: 2rem;
   }
 
   .hero-description {
-    font-size: var(--font-size-base);
-    line-height: 1.5;
-  }
-
-  .hero-stats {
-    flex-direction: column;
-    gap: var(--spacing-lg);
+    font-size: 1rem;
   }
 
   .phone-mockup {
-    width: 200px;
-    height: 400px;
-    transform: none;
+    width: 240px;
+    height: 480px;
   }
 
-  .phone-mockup:hover {
-    transform: none;
-  }
-
-  /* 섹션 제목 */
-  .section-title {
-    font-size: var(--font-size-3xl);
-  }
-
-  /* 버튼 크기 조정 */
   .btn-large {
-    padding: var(--spacing-md) var(--spacing-lg);
-    font-size: var(--font-size-base);
+    padding: 14px 32px;
+    font-size: 1rem;
   }
 
-  /* 특징 카드 */
-  .feature-card {
-    padding: var(--spacing-md);
-  }
-
-  .feature-icon {
-    width: 60px;
-    height: 60px;
-    font-size: var(--font-size-xl);
-  }
-
-  /* 후기 카드 */
-  .testimonial-card {
-    padding: var(--spacing-md);
-  }
-
-  .testimonial-content p {
-    font-size: var(--font-size-base);
-  }
-
-  /* 가입 폼 */
   .signup-content {
-    padding: 0 var(--spacing-md);
+    padding: 2rem;
   }
 
-  .signup-content h2 {
-    font-size: var(--font-size-3xl);
-  }
-
-  /* 푸터 */
-  .footer {
-    padding: var(--spacing-2xl) 0 var(--spacing-md);
+  .download-buttons {
+    flex-direction: column;
   }
 }
-
-/* 작은 모바일 (360px 이하) */
-@media (max-width: 360px) {
-  /* 히어로 섹션 */
-  .hero-title {
-    font-size: var(--font-size-2xl);
-  }
-
-  .hero-description {
-    font-size: var(--font-size-small);
-  }
-
-  /* 폰 모킹업 */
-  .phone-mockup {
-    width: 180px;
-    height: 360px;
-  }
-
-  .profile-card {
-    padding: var(--spacing-md);
-  }
-
-  .profile-image {
-    width: 60px;
-    height: 60px;
-  }
-
-  .profile-image::after {
-    width: 40px;
-    height: 40px;
-  }
-
-  /* 섹션 제목 */
-  .section-title {
-    font-size: var(--font-size-2xl);
-  }
-
-  /* 버튼 */
-  .btn {
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: var(--font-size-small);
-  }
-
-  .btn-large {
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: var(--font-size-small);
-  }
-
-  /* 폼 입력 */
-  .form-group input,
-  .form-group select {
-    padding: var(--spacing-md);
-    font-size: var(--font-size-small);
-  }
-}
-
-/* 큰 화면 (1200px 이상) */
-@media (min-width: 1200px) {
-  /* 히어로 섹션 */
-  .hero-title {
-    font-size: var(--font-size-5xl);
-  }
-
-  .hero-description {
-    font-size: var(--font-size-xl);
-  }
-
-  /* 폰 모킹업 */
-  .phone-mockup {
-    width: 350px;
-    height: 700px;
-  }
-
-  /* 특징 그리드 */
-  .features-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* 이용방법 */
-  .steps-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  /* 후기 그리드 */
-  .testimonials-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* 초대형 화면 (1600px 이상) */
-@media (min-width: 1600px) {
-  .container {
-    max-width: 1400px;
-  }
-
-  .hero-title {
-    font-size: 4rem;
-  }
-
-  .phone-mockup {
-    width: 400px;
-    height: 800px;
-  }
-}
-
-/* 가로 모드 (landscape) */
-@media (max-height: 500px) and (orientation: landscape) {
-  .hero {
-    padding: 80px 0 40px;
-  }
-
-  .hero-container {
-    gap: var(--spacing-lg);
-  }
-
-  .hero-title {
-    font-size: var(--font-size-3xl);
-  }
-
-  .phone-mockup {
-    width: 200px;
-    height: 400px;
-  }
-}
-
-/* 고해상도 디스플레이 (Retina) */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  /* 더 선명한 이미지와 아이콘을 위한 설정 */
-  .feature-icon,
-  .step-number,
-  .author-avatar {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-  }
-}
-
-/* 다크 모드 지원 (선택적) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-primary: #ffffff;
-    --text-secondary: #bdc3c7;
-    --background-white: #1a1a1a;
-    --background-light: #2d2d2d;
-    --border-color: #404040;
-  }
-
-  .navbar {
-    background: rgba(26, 26, 26, 0.95);
-  }
-
-  .feature-card,
-  .testimonial-card {
-    background: #2d2d2d;
-    color: white;
-  }
-
-  .form-group input,
-  .form-group select {
-    background: #2d2d2d;
-    color: white;
-    border-color: #404040;
-  }
-}
-
-/* 접근성 개선 */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-
-  .step-number::before {
-    animation: none;
-  }
-}
-
-/* 인쇄 스타일 */
-@media print {
-  .navbar,
-  .hero-buttons,
-  .download-buttons,
-  .signup-form,
-  .footer {
-    display: none;
-  }
-
-  .hero {
-    background: white;
-    color: black;
-  }
-
-  .section-title::after {
-    display: none;
-  }
-
-  .feature-card,
-  .testimonial-card {
-    box-shadow: none;
-    border: 1px solid #ccc;
-  }
-} 

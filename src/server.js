@@ -42,7 +42,7 @@ app.use((err, req, res, next) => {
 
 // 서버 시작
 app.listen(PORT, () => {
-  console.log(`🚀 데이팅앱 서버가 포트 ${PORT}에서 실행 중입니다.`);
+  console.log(`🚀 여놀 서버가 포트 ${PORT}에서 실행 중입니다.`);
   console.log(`📱 http://localhost:${PORT} 에서 확인하세요.`);
 });
 
